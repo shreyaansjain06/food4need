@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/fooddonor.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="nav-bar">
+          <p class="brand"> Thanks for Donating</p>
+        </div>
+        <div class="box-wrapper">
+         <div class="box">
+          <h2> Donation Information</h2> 
+            <form id="form" action=""id="registrationform">
+              <div>
+                <input type="text" name="name" id="name" placeholder=" ">
+                <label>Name: </label>
+              </div>
+              <div>
+                <input type="email" name="email" id="email"   placeholder=" " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"/>
+                <label>Email </label>
+              </div>
+              <div>
+                <input type="text" name="address"  id="address"   placeholder=" " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"/>
+                <label>Address</label>
+              </div>
+              <div>
+                <input type="text" name="city"  id="city"  placeholder=" " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"/>
+                <label>City</label>
+              </div>
+              <div>
+                <input type="text" name="state"  id="state"  placeholder=" " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"/>
+                <label>State</label>
+              </div>
+              <div>
+                <input type="number" name="zip" id="zip"  placeholder=" " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"/>
+                <label>Zip</label>
+              </div>
+              <div>
+                <input type="text" name="country"  id="country"   placeholder=" ">
+                <label>Country</label>
+              </div>
+              <div>
+                <input type="number" name="telephone" id="telephone"   placeholder=" ">
+                <label>Telephone</label>
+              </div>
+              <div>
+                <input type="text" name="product" id="product"   placeholder=" ">
+                <label>Product</label>
+              </div>
+              <div>
+                <input type="number" name="quantity" id="quantity"   placeholder=" ">
+                <label>Quantity</label>
+              </div>
+             <button id="submit" onclick="sendMessage()">Submit</button>
+            </form>  
+      </div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase.js"></script>
+    <script src="../js/fooddonor.js"></script>
+</body>
+</html>

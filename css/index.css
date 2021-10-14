@@ -1,0 +1,300 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  
+  }
+  
+  body{
+    min-height: 100vh;
+    background-color : black;
+    padding: 20px 100px;
+  }
+  
+  .section-main{
+    position: relative;
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    padding: 20px 0px;
+    
+    align-items: center;
+    
+  }
+  
+  .section-main h1{
+    color: SeaShell;
+    font-size: 100px;
+    font-weight: 800;
+    
+    letter-spacing: 3px;
+    line-height: 80px;
+    
+  }
+  
+  header{
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    transition: 0.6s;
+  }
+  
+  header.sticky{
+    background: LightGray ;
+    padding: 15px 100px;
+  }
+  
+  header .brand{
+    color: SeaShell ;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 3px;
+  }
+  
+  header .menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  header .menu a{
+    color: SeaShell;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 0 30px;
+    padding: 7 10px;
+    border-radius: 20px;
+    transition: 0.3s;
+    transition-property: color, background;
+  }
+  
+  header .menu a:hover{
+    color: SeaShell;
+    background: LightGray ;
+  }
+  
+  header .btn{
+    color: SeaShell;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .home__data{
+    color: SeaShell;
+    
+    
+  }
+  .center .btns{
+    margin-top: 20px;
+  }
+  .center .btns button{
+    height: 55px;
+    width: 170px;
+    border-radius: 5px;
+    border: none;
+    margin: 0 10px;
+    border: 2px solid white;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0 10px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  .center .btns button:first-child{
+    color: #fff;
+    background: none;
+  }
+  .btns button:first-child:hover{
+    background: white;
+    color: black;
+  }
+  .center .btns button:last-child{
+    background: white;
+    color: black;
+  }
+  .home__title{
+    font-size: 80px;
+    line-height: 10px;
+    margin-bottom: 1rem;
+    letter-spacing: 3px;
+    
+  }
+  
+  .home__description{
+    margin-bottom: 2.5rem;
+    
+  }
+  
+  
+  .show-btn{
+     
+      font-size: 20px;
+      font-weight: 500;
+      color: white;
+      cursor: pointer;
+      padding: 1.125rem 2rem;
+      background: linear-gradient(LightGray ,Black);
+      border-radius: .5rem;
+  }
+  
+  .show-btn{
+      position:absolute;
+      padding: 1.125rem 2rem;
+      left:15%;
+      top: 66%;
+      
+      transform: translate(-50%, -50%);
+       border-radius: .5rem;
+  }
+  .show-btn:hover{
+    background-color: #73A069;
+    
+  }
+  
+  label{
+      display: block;
+      color: white;
+      font-size: 18px;
+      margin-top: 10px;
+  }
+  
+  input{
+      display: block;
+      width: 90%;
+      background: transparent;
+      border: none;
+      outline: none;
+      border-bottom: 1px solid white;
+      padding: 10px;
+      color: white;
+  }
+  
+  button{
+      display: block;
+      width: 95%;
+      padding: 8px;
+      border: none;
+      outline: none;
+      background:  linear-gradient(LightGray ,Black);
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      margin-top: 20px;
+       border-radius: .5rem;
+  
+  }
+  
+  a{
+      text-decoration: none;
+      color:  LightGray  ;
+  
+  }
+  
+  .link{
+      margin-top: 30px;
+      text-align: center;
+      color:white;
+  }
+  
+  a:hover{
+      text-decoration: underline;
+  }
+  
+  
+  
+  
+  
+  
+  .section-two{
+    min-height: 100vh;
+    background: linear-gradient(LightGray ,Black);
+    padding: 20px 100px;
+  }
+  
+  .section-two h2{
+    color: Ivory;
+    font-size: 35px;
+    font-weight: 700;
+    
+    margin: 30px 0;
+  }
+  
+  .section-two p{
+    color: SeaShell;
+    font-size: 18px;
+    margin: 30px 0;
+  }
+  
+  @media (max-width: 1060px){
+    header .btn{
+      display: block;
+    }
+  
+    header .menu{
+      position: fixed;
+      background: DarkOliveGreen;
+      flex-direction: column;
+      min-width: 400px;
+      height: 100vh;
+      top: 0;
+      right: -100%;
+      padding: 80px 50px;
+      transition: 0.5s;
+      transition-property: right;
+    }
+  
+    header .menu.active{
+      right: 0;
+    }
+  
+    header .menu .close-btn{
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 25px;
+    }
+  
+    header .menu a{
+      display: block;
+      font-size: 20px;
+      margin: 20px;
+      padding: 0 15px;
+    }
+  }
+  
+  @media (max-width: 630px){
+    .section-main h1{
+      font-size: 50px;
+      line-height: 60px;
+    }
+  }
+  section-main.iframe.right {
+    position: fixed;
+    border: none;
+    float: right;
+    width: 75%;
+    height: 90%;
+    }
+    
+  .image{
+    position: absolute;
+    margin-top: -26%;
+    margin-left: 75%;
+  }
+  /* .food-insecurity{
+    background-color : grey;
+  } */
+  
