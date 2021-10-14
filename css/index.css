@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
 }
 
 .section-main {
@@ -10,7 +11,7 @@
   width: 100vw;
   min-height: 70vh;
   display: flex;
-  padding: 20px 0px;
+  padding: 40px 0px;
 
   align-items: center;
 }
@@ -129,5 +130,9 @@ h2{
   background-color: #27BABE;
 }
 .margin{
-  margin: 2rem;
+  margin: 1.5rem;
+}
+.adjust{
+  margin-top:-50px;
+   padding-top:50px;
 }
