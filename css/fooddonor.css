@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: all 1s;
   text-decoration: none;
 }
 
@@ -11,8 +10,7 @@ html,
 body {
   font-family: 'Open Sans Condensed', sans-serif;
   letter-spacing: 0.2em;
-  font-size: 0.98em;
-  /*min-height: 100%;*/
+  font-size: 1.2em;
 }
 
 /* === Wrapper  ===*/
@@ -54,32 +52,30 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 400px;
+  transform: translate(-50%, -30%);
+  width: 35vw;
   background-color: #fff;
   padding: 40px;
   box-sizing: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  /* box-shadow: 0 30px 20px rgba(0,0,0,.2); */
   box-shadow: 0 3px 60px rgba(57, 73, 76, 0.35);
 }
 
 .box h2 {
   margin: 0 0 40px;
-  padding: 0;
+  padding: 10px;
   color: #222;
   text-transform: uppercase;
   text-align: center;
 }
 
 .box input {
-  padding: 10px 0;
-  margin-bottom: 30px;
+  font-size: 0.9em;
+  margin: 35px 0;
 }
 
 .box textarea {
   height: 80px;
-  padding: 10px 0;
+  padding: 10px;
   margin-bottom: 40px;
 }
 
@@ -96,18 +92,20 @@ body {
   margin-bottom: 20px;
 }
 
-.box input[type='submit'] {
-  font-size: 1.1em;
+.box button {
+  font-size: 1.3em;
   border-bottom: none;
   cursor: pointer;
   background: #37a000;
   color: #fff;
-  margin-bottom: 0;
+  margin-bottom: -1em;
+  width: 100%;
   text-transform: uppercase;
 }
 
 .box form div {
   position: relative;
+  margin:40px 0;
 }
 
 .box form div label {
@@ -126,7 +124,7 @@ body {
   top: -12px;
   left: 0;
   color: #37a000;
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: bold;
 }
 
