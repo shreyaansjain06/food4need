@@ -131,6 +131,7 @@ h2{
 }
 .margin{
   margin: 1.5rem;
+  text-align: center;
 }
 .adjust{
   margin-top:-50px;
