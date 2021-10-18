@@ -1,94 +1,164 @@
-.home__title{
-  font-size: 40px;
-  line-height: 10px;
-  margin-bottom: 1rem;
-  letter-spacing: 3px;
-  
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
-.section-main{
-  min-height: 100vh;
-  background: linear-gradient(LightGray ,Black);
-  padding: 20px 100px;
+html,
+body {
+  font-family: 'Open Sans Condensed', sans-serif;
+  letter-spacing: 0.2em;
+  font-size: 1.2em;
 }
 
-.box-form
-{
-  position : absolute;
-   width: 500px;
-   background-color: Gret;
-   box-shadow: 0 0 20px 2 #999;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%,-50%)
-   
- }
-   
-   form
-   {
-   margin : 35px;
-   }
-.input-field
-{
-   width: 400px;
-   height: 40px;
-   margin-top: 20px;
-   padding-left: 10px;
-   padding-left: 10px;
-   border: 1px solid #777;
-   border-radius: 14px;
-   outline: none;
-   }
-   
-  .textarea-field{
-  height: 150px;
-  padding-top: 10px;
-  }
-  .btn{
-  border-radius: 20px;
-  color: #fff;
-  margin-top: 18px;
+/* === Wrapper  ===*/
+.wrapper {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'nav-bar'
+    'box';
+}
+
+/* === Nav Bab  ===*/
+.nav-bar {
+  grid-area: nav-bar;
+  height: 70px;
+  box-shadow: 0 1px 6px rgba(57, 73, 76, 0.35);
+}
+
+.brand {
+    text-align: center;
+  font-size: 2.3em;
+  text-transform: uppercase;
+  margin-left: 20px;
+  padding: 10px 10px;
+  line-height: 1.42857;
+  color: #222;
+}
+
+.box-wrapper {
+  height: 1000px;
+  position: relative;
+}
+
+/* === Contact form ===*/
+.box {
+  grid-area: box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  width: 35vw;
+  background-color: #fff;
+  padding: 40px;
+  box-sizing: border-box;
+  box-shadow: 0 3px 60px rgba(57, 73, 76, 0.35);
+}
+
+.box h2 {
+  margin: 0 0 40px;
   padding: 10px;
-  background-color: blue;
-  font-size: 12px;
-  border: none;
-  cursor: pointer;
-  }    
+  color: #222;
+  text-transform: uppercase;
+  text-align: center;
+}
 
-  #user-list {
-    margin:0;
-    padding:0;
-    width:180px;
-    float:left;
-    margin:10px;
-    border:1px solid #4fc3fc;
-   }
-   
-   #user-list h2 {
-    padding:10px;
-    margin:0;
-    color:white;
-   }
-   
-   #user-list li {
-    padding:5px 10px;
-    border-top:1px solid #4fc3fc;
-    cursor: pointer;
-    color:white;
-    font-style: italic;
-    list-style: none 
-   }
-   
-   #user-list li:hover {
-    background: #4fc3fc;
-   }
-   
-   #user-detail {
-    float:left;
-    width:200px;
-    margin:10px;
-    margin-left:0;
-    padding:10px;
-    border:1px solid #4fc3fc;
-    color:white;
-   }
+.box input {
+  font-size: 0.9em;
+  margin: 35px 0;
+}
+
+.box textarea {
+  height: 80px;
+  padding: 10px;
+  margin-bottom: 40px;
+}
+
+.box input,
+.box textarea {
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #999;
+}
+.box textarea {
+  margin-bottom: 20px;
+}
+
+.box button {
+  font-size: 1.3em;
+  border-bottom: none;
+  cursor: pointer;
+  background: #37a000;
+  color: #fff;
+  margin-bottom: -1em;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.box form div {
+  position: relative;
+  margin:40px 0;
+}
+
+.box form div label {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  color: #999;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.box input:focus ~ label,
+.box textarea:focus ~ label,
+.box input:valid ~ label,
+.box textarea:valid ~ label {
+  top: -12px;
+  left: 0;
+  color: #37a000;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.box input:focus ~ label,
+.box textarea:focus ~ label,
+.box input:valid,
+.box textarea:valid {
+  border-bottom: 2px solid #37a000;
+}
+
+
+
+ul {
+  text-align: center;
+}
+
+ul > li {
+  display: inline-block;
+  font-size: 1.9em;
+  color: #e0e0e0;
+  padding: 2px 12px;
+}
+
+.twitter,
+.git {
+  color: #222;
+}
+
+.git::after {
+  font-family: 'FontAwesome';
+  content: '\f09b';
+}
+
+.twitter::after {
+  font-family: 'FontAwesome';
+  content: '\f099';
+}
