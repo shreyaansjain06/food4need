@@ -1,95 +1,55 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from 'firebase/app';
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: 'AIzaSyAA8lzWI9jnbqDHdEaTgouPCsHgBjVz5Rk',
-  authDomain: 'generous-delicacies.firebaseapp.com',
-  projectId: 'generous-delicacies',
-  storageBucket: 'generous-delicacies.appspot.com',
-  messagingSenderId: '625369690264',
-  appId: '1:625369690264:web:1848e3ca57a233c8cba0ed',
-};
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
+import {initializeApp} from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js"
+var firebaseConfig = {
+    apiKey: "AIzaSyD4YqaLrYlfXz_gptVe7rGlTGRXEzpFBA4",
+    authDomain: "food4need-4f9c0.firebaseapp.com",
+    databaseURL: "https://food4need-4f9c0-default-rtdb.firebaseio.com",
+    projectId: "food4need-4f9c0",
+    storageBucket: "food4need-4f9c0.appspot.com",
+    messagingSenderId: "657260809429",
+    appId: "1:657260809429:web:5c24f9d057a6efea93a65c"
+  };
 
-let formMessage = firebase.database().ref('register');
 
-//listen for submit event//(1)
-document
-  .getElementById('registrationform')
-  .addEventListener('submit', formSubmit);
+const app=initializeApp(firebaseConfig);
+import { getDatabase, ref, set,update,remove} from "https://www.gstatic.com/firebasejs/9.1.3/firebase-database.js";
+const db=getDatabase()
+var name,email,address,city,state,zip,country,telephone,product,quantity;
 
-//Submit form(1.2)
-function formSubmit(e) {
-  e.preventDefault();
-  // Get Values from the DOM
-  let name = document.querySelector('#name').value;
-  let email = document.querySelector('#email').value;
-  let address = document.querySelector('#address').value;
-  let city = document.querySelector('#city').value;
-  let state = document.querySelector('#state').value;
-  let zip = document.querySelector('#zip').value;
-  let country = document.querySelector('#country').value;
-  let telephone = document.querySelector('#elephone').value;
-  let product = document.querySelector('#product').value;
-  let quantity = document.querySelector('#quantity').value;
-
-  //send message values
-  sendMessage(
-    name,
-    email,
-    address,
-    city,
-    state,
-    zip,
-    country,
-    telephone,
-    product,
-    quantity,
-    anything
-  );
-
-  //Show Alert Message(5)
-  document.querySelector('.alert').style.display = 'block';
-
-  //Hide Alert Message After Seven Seconds(6)
-  setTimeout(function () {
-    document.querySelector('.alert').style.display = 'none';
-  }, 7000);
-
-  //Form Reset After Submission(7)
-  document.getElementById('registrationform').reset();
+function readForm(){
+  name=document.getElementById("name").value;
+  email=document.getElementById("email").value;
+  address=document.getElementById("address").value;
+  city=document.getElementById("city").value;
+  state=document.getElementById("state").value;
+  zip=document.getElementById("zip").value;
+  country=document.getElementById("country").value;
+  telephone=document.getElementById("telephone").value;
+  product=document.getElementById("product").value;
+  quantity=document.getElementById("quantity").value;
+ console.log(name,email,address,city,state,zip,country,telephone,product,quantity);
 }
+document.getElementById('submit').onclick=function(e){
+  e.preventDefault();
+  readForm();
+set(ref(db,"food/"+ name),{
+  name:name,
+  email:email,
+  address:address,
+  city:city,
+  state:state,
+  zip:zip,
+  country:country,
+  telphone:telephone,
+  product:product,
+  quantity:quantity
+})
+.then(()=>{
+  alert("successfully stored data")
+})
+.catch((e)=>{
+  alert(e, "unsuccesfully")
+})
 
-//Send Message to Firebase(4)
-
-function sendMessage(
-  name,
-  email,
-  address,
-  city,
-  state,
-  zip,
-  country,
-  telephone,
-  product,
-  quantity
-) {
-  let newFormMessage = formMessage.push();
-  newFormMessage.set({
-    name: name,
-    email: email,
-    address: address,
-    city: city,
-    state: state,
-    zip: zip,
-    country: country,
-    telephone: telephone,
-    product: product,
-    quantity: quantity,
-  });
 }
