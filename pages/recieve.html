@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/fooddonor.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/receive.css" />
     <title>Food Donor</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="wrapper">
-        <div class="nav-bar">
-          <p class="brand">Food for you  </p>
-        </div>
-        <div class="box-wrapper">
-         <div class="box">
-          <h2> Available food</h2> 
-           
+      <div class="nav-bar">
+        <p class="brand">Food for you</p>
       </div>
+      <div class="box-wrapper">
+        <div class="box">
+          <form>
+            <table>
+              <tr id="header-row">
+                <th>Name</th>
+                <th>Address</th>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Contact No</th>
+              </tr>
+            </table>
+          </form>
         </div>
+      </div>
     </div>
-    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase.js"></script>
-    <script src="../js/fooddonor.js"></script>
-</body>
+    <script type='text/javascript' src='../js/keys.js'></script>
+    <script type="module" src="../js/config.js"></script>
+    <script type="module" src="../js/receive.js"></script>
+  </body>
 </html>
